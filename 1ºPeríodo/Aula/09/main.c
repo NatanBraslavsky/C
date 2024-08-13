@@ -169,9 +169,5 @@ int main(void) {
     }
   }
   printf("Nome da pessoa mais alta: %s", maisAlta);
-  
-
-
-  
   return 0;
 }
