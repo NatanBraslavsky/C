@@ -122,12 +122,12 @@ int main(void) {
   
     //quest 2
 
-  int tam=0;
-  char nome[20];
-  printf("Digite seu nome: ");
-  scanf("%s", nome);
-  tam = strlen(nome);
-  printf("Qtd letras: %d", tam);
+  // int tam=0;
+  // char nome[20];
+  // printf("Digite seu nome: ");
+  // scanf("%s", nome);
+  // tam = strlen(nome);
+  // printf("Qtd letras: %d", tam);
   // 
 
 
@@ -154,20 +154,20 @@ int main(void) {
 
   //quest 4
 
-  float altura[3], maiorAltura=0;
-  char nomes[3][20];
-  char maisAlta[20];
+//   float altura[3], maiorAltura=0;
+//   char nomes[3][20];
+//   char maisAlta[20];
 
-  for(int i = 0; i < 3; i++){
-    printf("Digite sua altura: ");
-    scanf("%f", &altura[i]);
-    printf("Digite seu nome: ");
-    scanf("%s", nomes[i]);
-    if(altura[i] > maiorAltura){
-      maiorAltura = altura[i];
-      strcpy(maisAlta, nomes[i]);
-    }
-  }
-  printf("Nome da pessoa mais alta: %s", maisAlta);
-  return 0;
-}
+//   for(int i = 0; i < 3; i++){
+//     printf("Digite sua altura: ");
+//     scanf("%f", &altura[i]);
+//     printf("Digite seu nome: ");
+//     scanf("%s", nomes[i]);
+//     if(altura[i] > maiorAltura){
+//       maiorAltura = altura[i];
+//       strcpy(maisAlta, nomes[i]);
+//     }
+//   }
+//   printf("Nome da pessoa mais alta: %s", maisAlta);
+//   return 0;
+// }
