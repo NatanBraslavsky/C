@@ -391,3 +391,131 @@
     
 //     return 0;
 // }
+
+
+
+
+
+//Número 10
+// #include <stdio.h>
+
+
+// int tabuada(int n){
+//     for(int i = 1; i < n; i++){
+//         int valor = 0;
+//         valor = 7 * i;
+//         printf("%d * 7 = %d\n",i, valor);
+//     }
+//     return 0;
+// }
+
+
+// int main(){
+
+//     int num = 0;
+
+//     printf("Digite um numero: ");
+//     scanf("%d", &num);
+//     tabuada(num);
+
+//     return 0;
+// }
+
+
+
+
+
+
+//Número 11
+
+// #include <stdio.h>
+
+// int maiorValor(int x, int y, int z){
+    
+//     int maior = 0;
+//     maior = x;
+//     if(y > maior){
+//         maior = y;
+//     }
+//     if(z > maior){
+//         maior = z;
+//     }
+//     return maior;
+// }
+
+// int main(){
+
+//     int n1=0, n2=0, n3=0;
+
+//     printf("Digite um valor: ");
+//     scanf("%d", &n1);
+//     printf("Digite um valor: ");
+//     scanf("%d", &n2);
+//     printf("Digite um valor: ");
+//     scanf("%d", &n3);
+//     printf("O maior e: %d", maiorValor(n1, n2, n3));
+
+//     return 0;
+// }
+
+
+
+
+
+//Número 12
+
+// #include <stdio.h>
+
+// int calculo(int n, int s){
+
+//     int porcent = 0;
+
+//     switch(n){
+//         case 's':
+//         case 'S':
+//         porcent = s*5/100;
+//         break;
+
+//         case 'p':
+//         case 'P':
+//         porcent = s*10/100;
+//         break;
+
+//         case 'j':
+//         case 'J':
+//         porcent = s*15/100;
+//         break;
+
+//     }
+//     return porcent; 
+// }
+
+
+
+// int main(){
+
+//     float salario = 0;
+//     char nivel;
+//     printf("Digite seu salario: ");
+//     scanf("%f", &salario);
+//     printf("Digite seu nivel de experiencia: ");
+//     scanf(" %c", &nivel);
+//     printf("Seu salario sera de R$%.2f", calculo(nivel, salario)+salario);
+
+//     return 0;
+// }
+
+
+
+
+
+
+//Número 13
+
+#include <stdio.h>
+
+
+int tres(x, y, z){
+    return x+y+z;
+}
+
