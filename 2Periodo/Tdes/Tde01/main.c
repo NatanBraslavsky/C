@@ -165,13 +165,124 @@
 //   return 0;
 // }
 
+
+
+
+
 // Número 5
+
+// #include <stdio.h>
+
+// int main(){
+
+//     int matriz[3][3];
+
+//     for(int i = 0; i < 3; i++){
+//         for(int j = 0; j < 3; j++){
+//             printf("Digite o valor da %da linha e %d coluna: ", i+1, j+1);
+//             scanf("%d", &matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     for(int i = 0; i < 3; i++){
+//         for(int j = 0; j < 3; j++){
+//             if(i < j){
+//                 printf("[%d]  ", matriz[i][j]);
+//             }
+//             else {
+//                 printf("[*]  ");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+
+//Número 6
+
+// #include <stdio.h>
+
+// int main(){
+
+//     int matriz[4][4], soma=0;
+
+//     for(int i = 0; i < 4; i++){
+//         for(int j = 0; j < 4; j++){
+//             printf("Digite o valor da %d linha e %d coluna: ", i+1, j+1);
+//             scanf("%d", &matriz[i][j]);
+//             if(i == j || i > j){
+//                 soma+=matriz[i][j];
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     printf("Matriz: \n");
+
+//     for(int i = 0; i < 4; i++){
+//         for(int j = 0; j < 4; j++){
+//             printf("[%d] ", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("Soma do triangulo inferior incluindo a diagonal principal: %d\n", soma);
+
+//     return 0;
+// }
+
+
+
+
+
+
+//Número 7
+// [00][01][02]
+// [10][11][12]
+// [20][21][22]
 
 #include <stdio.h>
 
 int main(){
 
-    
+    int matriz[3][3], maior=0; 
+
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            printf("Digite o valor da %d linha e %d coluna: ", i+1, j+1);
+            scanf("%d", &matriz[i][j]);
+            if(i+j < 2){
+                if(matriz[i][j] > maior){
+                    maior = matriz[i][j];
+                }
+            }
+        }
+        printf("\n");
+    }
+
+    printf("Os valores a cima da diagonal secundária são: \n");
+
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            if(i+j < 2){
+                printf("[%d] ", matriz[i][j]);
+            } else {
+                printf("[*] ");
+            }
+        }
+        printf("\n");
+    }
+
+    printf("E o seu maior valor é: %d", maior);
 
     return 0;
 }
+vou ralar
+valeu ate amanha
