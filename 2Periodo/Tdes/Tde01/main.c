@@ -512,10 +512,30 @@
 
 //Número 13
 
-#include <stdio.h>
+// #include <stdio.h>
 
 
-int tres(x, y, z){
-    return x+y+z;
-}
+// int soma(int x, int y, int z){
+//     return x+y+z;
+// }
+
+// int media(int x, int y, int z){
+//     return soma(x, y, z)/3;
+// }
+
+// int main(){
+
+//     int n1 = 0, n2 = 0, n3 = 0, med=0;
+
+//     printf("Digite um número: ");
+//     scanf("%d", &n1);    
+//     printf("Digite um número: ");
+//     scanf("%d", &n2);    
+//     printf("Digite um número: ");
+//     scanf("%d", &n3);    
+//     med = media(n1, n2, n3);
+//     printf("A media e: %d", med);
+
+//      return 0;
+// }
 
