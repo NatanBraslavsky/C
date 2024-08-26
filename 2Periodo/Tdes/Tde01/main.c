@@ -527,15 +527,48 @@
 
 //     int n1 = 0, n2 = 0, n3 = 0, med=0;
 
-//     printf("Digite um número: ");
+//     printf("Digite um numero: ");
 //     scanf("%d", &n1);    
-//     printf("Digite um número: ");
+//     printf("Digite um numero: ");
 //     scanf("%d", &n2);    
-//     printf("Digite um número: ");
+//     printf("Digite um numero: ");
 //     scanf("%d", &n3);    
 //     med = media(n1, n2, n3);
 //     printf("A media e: %d", med);
 
 //      return 0;
 // }
+
+
+
+
+
+
+
+//Número 14
+
+#include <stdio.h>
+
+int pts(float x, float y){
+    return x*3+y;
+}
+
+
+int main(){
+
+    float vitorias = 0, empates = 0, derrotas = 0, qtd = 0;
+
+    printf("Quantidade de vitorias: ");
+    scanf("%f", &vitorias);
+    printf("Quantidade de empates: ");
+    scanf("%f", &empates);
+    printf("Quantidade de derrotas: ");
+    scanf("%f", &derrotas);
+    qtd = vitorias+empates+derrotas;
+    printf("A quantidade de pontos totais: %d", pts(vitorias, empates));
+    printf("\nA media de pontos por partida: %.2f", pts(vitorias, empates) / qtd);
+
+    return 0;
+}
+
 
