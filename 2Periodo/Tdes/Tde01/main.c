@@ -291,44 +291,44 @@
 
 //Número 8
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// int main(){
+int main(){
 
 
-//     float matriz[4][4], soma = 0, media = 0;
-//     int qtd = 0;
+    float matriz[4][4], soma = 0, media = 0;
+    int qtd = 0;
 
-//     for(int i = 0; i < 4; i++){
-//         for(int j = 0; j < 4; j++){
-//             printf("Digite o valor da %da linha e %da coluna: ", i+1, j+1);
-//             scanf("%f", &matriz[i][j]);
-//             if(i + j > 3){
-//                 soma+=matriz[i][j];
-//                 qtd++;
-//             }
-//         }
-//         printf("\n");
-//     }
-//     media = soma / qtd;
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            printf("Digite o valor da %da linha e %da coluna: ", i+1, j+1);
+            scanf("%f", &matriz[i][j]);
+            if(i + j > 3){
+                soma+=matriz[i][j];
+                qtd++;
+            }
+        }
+        printf("\n");
+    }
+    media = soma / qtd;
 
-//     printf("Os valores abaixo da diagonal secundaria: \n");
+    printf("Os valores abaixo da diagonal secundaria: \n");
 
-//     for(int i = 0; i < 4; i++){
-//         for(int j = 0; j < 4; j++){
-//             if(i + j > 3){
-//                 printf("[%.0f] ", matriz[i][j]);
-//             } else{
-//                 printf("[*] ");
-//             }
-//         }
-//         printf("\n");
-//     }
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            if(i + j > 3){
+                printf("[%.0f] ", matriz[i][j]);
+            } else{
+                printf("[*] ");
+            }
+        }
+        printf("\n");
+    }
 
-//     printf("A media desses valores: %.2f", media);
+    printf("A media desses valores: %.2f", media);
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 
