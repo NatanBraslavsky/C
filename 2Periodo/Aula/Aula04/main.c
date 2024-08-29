@@ -75,13 +75,7 @@
 //     return 0;
 // }
 
-
-
-
-
-
-
-//Ex002
+// Ex002
 
 // #include <stdio.h>
 
@@ -121,25 +115,62 @@
 
 
 
+// Ex triangulo
+
+// #include <stdio.h>
+
+// int main()
+// {
+
+//     for (int i = 0; i < 5; i++)
+//     {
+//         for (int j = 0; j < 5; j++)
+//         {
+//             if (i + j >= 4)
+//             {
+//                 printf("* ");
+//             }
+//             else
+//             {
+//                 printf(" ");
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
 
 
-//Ex triangulo
+
+
+
+//chat gpt
 
 #include <stdio.h>
 
-int main(){
+int main() {
+    int i, j, height;
 
-    for(int i = 0; i < 5; i++){
-        for(int j = 0; j < 5; j++){
-            if(i + j >= 4){
-                printf("* ");
-            } else{
-                printf(" ");
-            }
+    printf("Digite a altura do triangulo: ");
+    scanf("%d", &height);
+
+    for (i = 1; i <= height; i++) {
+
+        for (j = 1; j <= height - i; j++) {
+            printf(" ");
         }
+     
+        for (j = 1; j <= 2 * i - 1; j++) {
+            printf("*");
+        }
+
         printf("\n");
     }
 
     return 0;
 }
+
+
+
 
