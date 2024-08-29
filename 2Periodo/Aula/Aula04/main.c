@@ -83,39 +83,63 @@
 
 //Ex002
 
+// #include <stdio.h>
+
+// int main(){
+
+//     int matriz[2][4], transposta[4][2];
+//     for(int i = 0; i < 2; i++){
+//         for(int j = 0; j < 4; j++){
+//             printf("Digite um valor para a matriz: ");
+//             scanf("%d", &matriz[i][j]);
+//             transposta[j][i] = matriz[i][j];
+//         }
+//     }
+
+//     printf("Matriz original: \n");
+
+//     for(int i = 0; i < 2; i++){
+//         for(int j = 0; j < 4; j++){
+//             printf("[ %d ]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("Matriz transposta: \n");
+
+//     for(int i = 0; i < 4; i++){
+//         for(int j = 0; j < 2; j++){
+//             printf("[ %d ]", transposta[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+//Ex triangulo
+
 #include <stdio.h>
 
 int main(){
 
-    int matriz[2][4], transposta[4][2];
-    for(int i = 0; i < 2; i++){
-        for(int j = 0; j < 4; j++){
-            printf("Digite um valor para a matriz: ");
-            scanf("%d", &matriz[i][j]);
-            transposta[j][i] = matriz[i][j];
-        }
-    }
-
-    printf("Matriz original: \n");
-
-    for(int i = 0; i < 2; i++){
-        for(int j = 0; j < 4; j++){
-            printf("[ %d ]", matriz[i][j]);
-        }
-        printf("\n");
-    }
-
-    printf("Matriz transposta: \n");
-
-    for(int i = 0; i < 4; i++){
-        for(int j = 0; j < 2; j++){
-            printf("[ %d ]", transposta[i][j]);
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++){
+            if(i + j >= 4){
+                printf("* ");
+            } else{
+                printf(" ");
+            }
         }
         printf("\n");
     }
 
     return 0;
 }
-
-
 
