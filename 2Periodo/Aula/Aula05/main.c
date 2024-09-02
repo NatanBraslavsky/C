@@ -21,12 +21,45 @@
 
 
 //Número 2
+// #include <stdio.h>
+
+// void votar(int x){
+//     if(x >= 18 && x <= 70){
+//         printf("Obrigado a votar.");
+//     } else{
+//         printf("Nao e obrigado a votar.");
+//     }
+// }
+
+// int main(){
+    
+//     int idade;
+
+//     printf("Digite sua idade: ");
+//     scanf("%d", &idade);
+//     votar(idade);
+
+//     return 0;
+// }
+
+
+
+//Número 3
 #include <stdio.h>
 
-int votar(x){
-    
+int anos(int a, int m, int d){
+    return a * 365 + m * 30 + d;
 }
 
 int main(){
 
+    int ano, mes, dia;
+
+    printf("Anos: ");
+    scanf("%d", &ano);
+    printf("Mes: ");
+    scanf("%d", &mes);
+    printf("Dias: ");
+    scanf("%d", &dia);
+    printf("Voce possui %d dias vividos", anos(ano, mes, dia));
 }
