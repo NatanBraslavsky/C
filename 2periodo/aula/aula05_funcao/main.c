@@ -151,69 +151,100 @@
 
 
 
+// #include <stdio.h>
+
+// float total(char s, char t);
+
+
+// int main(){
+
+//     char tamanho, sexo;
+//     float tot = 0;
+
+//     printf("Digite seu sexo: [ M / F ]: ");
+//     scanf(" %c", &sexo);
+//     printf("Digite o tamanho da roupa: [ P / M / G]: ");
+//     scanf(" %c", &tamanho);
+//     tot = total(sexo, tamanho);
+//     if(tot >= 0){
+//         printf("Valor total: %.2f", tot);
+//     } else{
+//         printf("Valor invalido.");
+//     }
+    
+//     return 0;
+// }
+
+// float total(char s, char t){
+//     switch(s){
+//         case 'M':
+//         case 'm':
+//             switch(t){
+//                 case 'p':
+//                 case 'P':
+//                     return 22.25;
+
+//                 case 'm':
+//                 case 'M':
+//                     return 27.15;
+
+//                 case 'g':
+//                 case 'G':
+//                     return 40;
+                
+//                 default:
+//                     return -1;
+//             }
+//         case 'F':
+//         case 'f':
+//             switch(t){
+//                 case 'p':
+//                 case 'P':
+//                     return 28.75;
+
+//                 case 'm':
+//                 case 'M':
+//                     return 39.99;
+
+//                 case 'g':
+//                 case 'G':
+//                     return 51;
+
+//                 default:
+//                     return -1;
+//             }
+//         default:
+//             return -1;
+//     }
+// }
+
+
+
+
+
+// 4 - Crie uma função que conta quantas vezes um valor específico digitado pelo usuário aparece em um array com 4 inteiros também preenchido pelo usuário. A função deve atualizar uma variável com a contagem e deve ser chamada passando o array, o valor específico digitado e o valor da contagem retornado por referência.
+
+// 5 - Crie uma função que calcula a média de dois números inteiros e atualiza o valor de uma variável com a média. A função deve ser chamada passando a variável média por referência.
+
+// 6 - Crie uma função que atualiza o valor de dois inteiros: o primeiro deve ser multiplicado por 2 e o segundo deve ser decrementado em 1. A função deve ser chamada passando os endereços das variáveis.
+
+
+// 2 - Crie uma função que recebe um número inteiro e retorne esse número incrementado em 5. A função deve ser chamada passando um número por valor.
+
 #include <stdio.h>
 
-float total(char s, char t);
+// int acrementado(int x);
 
+// int main(){
+//     int num = 0;
+//     printf("Digite um numero: ");
+//     scanf("%d", &num);
+//     printf("%d", acrementado(num));
+// }
 
-int main(){
+// int acrementado(int x){
+//     return x + 5;
+// }
 
-    char tamanho, sexo;
-    float tot = 0;
+// 3 - Crie uma função que conta quantas vezes um valor ímpar ocorre em um array de 4 inteiros digitados pelo usuário. A função deve retornar a quantidade de ímpares.
 
-    printf("Digite seu sexo: [ M / F ]: ");
-    scanf(" %c", &sexo);
-    printf("Digite o tamanho da roupa: [ P / M / G]: ");
-    scanf(" %c", &tamanho);
-    tot = total(sexo, tamanho);
-    if(tot >= 0){
-        printf("Valor total: %.2f", tot);
-    } else{
-        printf("Valor invalido.");
-    }
-    
-    return 0;
-}
-
-float total(char s, char t){
-    switch(s){
-        case 'M':
-        case 'm':
-            switch(t){
-                case 'p':
-                case 'P':
-                    return 22.25;
-
-                case 'm':
-                case 'M':
-                    return 27.15;
-
-                case 'g':
-                case 'G':
-                    return 40;
-                
-                default:
-                    return -1;
-            }
-        case 'F':
-        case 'f':
-            switch(t){
-                case 'p':
-                case 'P':
-                    return 28.75;
-
-                case 'm':
-                case 'M':
-                    return 39.99;
-
-                case 'g':
-                case 'G':
-                    return 51;
-
-                default:
-                    return -1;
-            }
-        default:
-            return -1;
-    }
-}
