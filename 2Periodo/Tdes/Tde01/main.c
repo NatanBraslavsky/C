@@ -1,6 +1,6 @@
 // Número 1
 
-// #include <stdio.h>
+#include <stdio.h>
 
 // int main (){
 
@@ -291,44 +291,44 @@
 
 //Número 8
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(){
+// int main(){
 
 
-    float matriz[4][4], soma = 0, media = 0;
-    int qtd = 0;
+//     float matriz[4][4], soma = 0, media = 0;
+//     int qtd = 0;
 
-    for(int i = 0; i < 4; i++){
-        for(int j = 0; j < 4; j++){
-            printf("Digite o valor da %da linha e %da coluna: ", i+1, j+1);
-            scanf("%f", &matriz[i][j]);
-            if(i + j > 3){
-                soma+=matriz[i][j];
-                qtd++;
-            }
-        }
-        printf("\n");
-    }
-    media = soma / qtd;
+//     for(int i = 0; i < 4; i++){
+//         for(int j = 0; j < 4; j++){
+//             printf("Digite o valor da %da linha e %da coluna: ", i+1, j+1);
+//             scanf("%f", &matriz[i][j]);
+//             if(i + j > 3){
+//                 soma+=matriz[i][j];
+//                 qtd++;
+//             }
+//         }
+//         printf("\n");
+//     }
+//     media = soma / qtd;
 
-    printf("Os valores abaixo da diagonal secundaria: \n");
+//     printf("Os valores abaixo da diagonal secundaria: \n");
 
-    for(int i = 0; i < 4; i++){
-        for(int j = 0; j < 4; j++){
-            if(i + j > 3){
-                printf("[%.0f] ", matriz[i][j]);
-            } else{
-                printf("[*] ");
-            }
-        }
-        printf("\n");
-    }
+//     for(int i = 0; i < 4; i++){
+//         for(int j = 0; j < 4; j++){
+//             if(i + j > 3){
+//                 printf("[%.0f] ", matriz[i][j]);
+//             } else{
+//                 printf("[*] ");
+//             }
+//         }
+//         printf("\n");
+//     }
 
-    printf("A media desses valores: %.2f", media);
+//     printf("A media desses valores: %.2f", media);
 
-    return 0;
-}
+//     return 0;
+// }
 
 
 
@@ -547,28 +547,72 @@ int main(){
 
 //Número 14
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int pts(float x, float y){
-    return x*3+y;
-}
+// int pts(float x, float y){
+//     return x*3+y;
+// }
 
 
+// int main(){
+
+//     float vitorias = 0, empates = 0, derrotas = 0, qtd = 0;
+
+//     printf("Quantidade de vitorias: ");
+//     scanf("%f", &vitorias);
+//     printf("Quantidade de empates: ");
+//     scanf("%f", &empates);
+//     printf("Quantidade de derrotas: ");
+//     scanf("%f", &derrotas);
+//     qtd = vitorias+empates+derrotas;
+//     printf("A quantidade de pontos totais: %d", pts(vitorias, empates));
+//     printf("\nA media de pontos por partida: %.2f", pts(vitorias, empates) / qtd);
+
+//     return 0;
+// }
+
+
+
+//Número 15
+// int main(){
+//     //a-)25 6422296 6422296 25 50 6422292
+//     //b-)a = valor de a; pa = endereço de a; &a = endereço de a; *pa = valor apontando para o endereço de a, b = resultado da soma 25 + 25; &b = endereço de b
+//     int a = 25;
+//     int *pa = &a;
+//     int b = *pa + a;
+//     printf("%d %d %d %d %d %d \n", a, pa, &a, *pa, b, &b);
+
+//     return 0;
+// }
+
+
+
+
+#include <string.h>
+//Número 16
+void contar_vogais (char *str, int *numCaracteres);
+ 
 int main(){
 
-    float vitorias = 0, empates = 0, derrotas = 0, qtd = 0;
+    char string[50];
+    int qtdVogais = 0;
 
-    printf("Quantidade de vitorias: ");
-    scanf("%f", &vitorias);
-    printf("Quantidade de empates: ");
-    scanf("%f", &empates);
-    printf("Quantidade de derrotas: ");
-    scanf("%f", &derrotas);
-    qtd = vitorias+empates+derrotas;
-    printf("A quantidade de pontos totais: %d", pts(vitorias, empates));
-    printf("\nA media de pontos por partida: %.2f", pts(vitorias, empates) / qtd);
+    printf("Digite um string: ");
+    fgets(string, sizeof(string), stdin);    
+    contar_vogais(string, &qtdVogais);
+    printf("A quantidade de vogais minusculas: %d", qtdVogais);
 
     return 0;
 }
 
+void contar_vogais (char *str, int *numCaracteres){
+    int cont = 0;
+    while(str[cont] != '\0'){
+        char c = str[cont];
+        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+            *numCaracteres+=1; 
+        }
+        cont++;
+    }
+}
 
