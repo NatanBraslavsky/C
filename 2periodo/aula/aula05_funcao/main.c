@@ -248,3 +248,102 @@
 
 // 3 - Crie uma função que conta quantas vezes um valor ímpar ocorre em um array de 4 inteiros digitados pelo usuário. A função deve retornar a quantidade de ímpares.
 
+// int impar(int v[], int qtd);
+
+// int main(){
+//     int valor[4], qtd = 0;
+//     for(int i = 0; i < 4; i++){
+//         printf("Digite um numero: ");
+//         scanf("%d", &valor[i]);
+//     }
+//     printf("Qtd de impares: %d", impar(valor, qtd));
+//     return 0;
+// }
+
+// int impar(int v[], int qtd){
+//     for(int i = 0; i < 4; i++){
+//         if(v[i] % 2 != 0){
+//             qtd++;
+//         }
+//     }
+//     return qtd;
+// }
+
+
+
+//4 - Crie uma função que conta quantas vezes um valor específico digitado pelo usuário aparece em um array com 4 inteiros também preenchido pelo usuário. A função deve atualizar uma variável com a contagem e deve ser chamada passando o array, o valor específico digitado e o valor da contagem retornado por referência.
+
+// void qtdPreenchido(int esc, int vet[], int *qtd);
+
+// int main(){
+
+//     int vetor[4], qtd = 0, numEscolhido = 0;
+//     printf("Digite o valor que deseja verificar a quantidade de vezes que apareceu no vetor: ");
+//     scanf("%d", &numEscolhido);
+//     for(int i = 0; i < 4; i++){
+//         printf("Digite um valor: ");
+//         scanf("%d", &vetor[i]);
+//     }
+//     qtdPreenchido(numEscolhido, vetor, &qtd);
+//     printf("A quantidade de vezes que o numero %d foi escolhido: %d vezes", numEscolhido, qtd);
+
+//     return 0;
+// }
+
+// void qtdPreenchido(int esc, int vet[], int *qtd){
+//     for(int i = 0; i < 4; i++){
+//         if(vet[i] == esc){
+//             *qtd += 1;
+//         }
+//     }
+// }
+
+
+
+// 5 Crie uma função que calcula a média de dois números inteiros e atualiza o valor de uma variável com a média. A função deve ser chamada passando a variável média por referência.
+
+// void mediaNumeros(float n1, float n2, float *med);
+
+// int main(){
+
+//     float num1, num2, media = 0;
+//     printf("Digite o 1 numero: ");
+//     scanf("%f", &num1);
+//     printf("Digite o 2 numero: ");
+//     scanf("%f", &num2);
+//     mediaNumeros(num1, num2, &media);
+//     printf("A media entre %.2f e %.2f vale %.2f.", num1, num2, media);
+
+//     return 0;
+// }
+
+// void mediaNumeros(float n1, float n2, float *med){
+//     *med = (n1 + n2) / 2;
+// }
+
+
+// 6 - Crie uma função que atualiza o valor de dois inteiros: o primeiro deve ser multiplicado por 2 e o segundo deve ser decrementado em 1. A função deve ser chamada passando os endereços das variáveis.
+
+void inteiros(int *n1, int *n2);
+
+int main(){
+
+    int num1, num2;
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+    inteiros(&num1, &num2);
+    printf("%d, %d", num1, num2);
+
+    return 0;
+}
+
+void inteiros(int *n1, int *n2){
+    *n1 *= 2;
+    *n2 -= 1;
+}
+
+
+
+

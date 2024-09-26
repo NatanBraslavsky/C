@@ -151,3 +151,6 @@ char* preencheAlfabeto(int tam){
     return vet;
 }
 
+
+
+
