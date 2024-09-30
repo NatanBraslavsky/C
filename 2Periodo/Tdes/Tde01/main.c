@@ -1,6 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
 // Número 1
 
-#include <stdio.h>
 
 // int main (){
 
@@ -588,31 +590,106 @@
 
 
 
-#include <string.h>
 //Número 16
-void contar_vogais (char *str, int *numCaracteres);
+// void contar_vogais (char *str, int *numCaracteres);
  
+// int main(){
+
+//     char string[50];
+//     int qtdVogais = 0;
+
+//     printf("Digite um string: ");
+//     fgets(string, sizeof(string), stdin);    
+//     contar_vogais(string, &qtdVogais);
+//     printf("A quantidade de vogais minusculas: %d", qtdVogais);
+
+//     return 0;
+// }
+
+// void contar_vogais (char *str, int *numCaracteres){
+//     int cont = 0;
+//     while(str[cont] != '\0'){
+//         char c = str[cont];
+//         if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+//             *numCaracteres+=1; 
+//         }
+//         cont++;
+//     }
+// }
+
+
+
+//Número 17
+
+// void calcular_hexagono(float l, float *area, float *perimetro);
+
+// int main(){
+//     float l = 0, area= 0, perimetro = 0;
+//     printf("Digite o lado do lado do hexagono: ");
+//     scanf("%f", &l);
+//     calcular_hexagono(l, &area, &perimetro);
+//     printf("Area: %.2f\nPerimetro: %.2f", area, perimetro);
+// }
+
+// void calcular_hexagono(float l, float *area, float *perimetro){
+//     *area = (3*(pow(l, 2))*sqrt(3))/2;
+//     *perimetro = 6*l;
+// }
+
+
+
+
+//Número 18
+char validarSituacao(float p1, float p2, float p3, int faltas, int aulas, float *media, float *porcentagem);
+
 int main(){
+    float n1, n2, n3, media, porcentagem;
+    int faltas, aulas;
+    
+    printf("Digite a nota 1: ");
+    scanf("%f", &n1);
+    printf("Digite a nota 2: ");
+    scanf("%f", &n2);
+    printf("Digite a nota 3: ");
+    scanf("%f", &n3);
+    printf("Quantidade de aulas: ");
+    scanf("%d", &aulas);
+    printf("Quantidade de faltas: ");
+    scanf("%d", &faltas);
+    
 
-    char string[50];
-    int qtdVogais = 0;
+    switch(validarSituacao(n1, n2, n3, faltas, aulas, &media, &porcentagem)){
+        case 'A':
+        printf("Sua media foi: %.2f\n", media);
+        printf("Porcentagem de faltas: %.1f%%\n", porcentagem);
+        printf("Situacao: Aprovado!");
+        break;
 
-    printf("Digite um string: ");
-    fgets(string, sizeof(string), stdin);    
-    contar_vogais(string, &qtdVogais);
-    printf("A quantidade de vogais minusculas: %d", qtdVogais);
+        case 'R':
+        printf("Sua media foi: %.2f\n", media);
+        printf("Porcentagem de faltas: %.1f%%\n", porcentagem);
+        printf("Situacao: Reprovado!");
+        break;
 
-    return 0;
-}
+        case 'F':
+        printf("Sua media foi: %.2f\n", media);
+        printf("Porcentagem de faltas: %.1f%%\n", porcentagem);
+        printf("Situacao: Reprovado por falta!");
+        break;
 
-void contar_vogais (char *str, int *numCaracteres){
-    int cont = 0;
-    while(str[cont] != '\0'){
-        char c = str[cont];
-        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
-            *numCaracteres+=1; 
-        }
-        cont++;
     }
 }
 
+char validarSituacao(float p1, float p2, float p3, int faltas, int aulas, float *media, float *porcentagem){
+    *media = (p1 + p2 + p3) / 3;
+    *porcentagem = (faltas * 100) / aulas;
+    if(*porcentagem > 25){
+        return 'F';
+    } else{
+        if(*media >= 6){
+            return 'A';
+        } else{
+            return 'R';
+        }
+    }
+}
