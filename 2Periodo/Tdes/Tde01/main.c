@@ -833,48 +833,91 @@
 
 //Número 24
 
+// int main(){
+
+//     int *vetor, remover = 0, tamanho = 5;
+//     vetor = (int*)malloc(tamanho * sizeof(int));
+//     if(vetor == NULL){
+//         printf("ERRO.");
+//         return 1;
+//     }
+//     for(int i = 0; i < tamanho; i++){
+//         printf("Digite um valor na posicao %d:", i+1);
+//         scanf("%d", &vetor[i]);
+//     }
+//     printf("Vetor: ");
+//     for(int i = 0; i < tamanho; i++){
+//         printf("%d ", vetor[i]);
+//     }
+//     printf("Selecione um valor para remover: ");
+//     scanf("%d", &remover);
+
+//     int i,j;
+//     for(i = 0; i < tamanho; i++){
+//         if(vetor[i] == remover){
+//             break;
+//         }
+//     }
+//     if(i < tamanho){
+//         for(j = i; j < tamanho-1; j++){
+//             vetor[j] = vetor[j + 1];
+//         }
+//         tamanho--;
+//     } else{
+//         printf("Valor nao encontrado no vetor.");
+//     }
+//     vetor = realloc(vetor, tamanho * sizeof(int));
+//     if (vetor == NULL && tamanho > 0) {
+//         printf("ERRO: Falha ao redimensionar o vetor.\n");
+//         return 1;
+//     }
+//     printf("Vetor com o valor removido: ");
+//     for(int i = 0; i < tamanho; i++){
+//         printf("%d ", vetor[i]);
+//     }
+//     free(vetor);
+//     return 0;
+// }
+
+
+//Número 25
+
 int main(){
 
-    int *vetor, remover = 0, tamanho = 5;
-    vetor = (int*)malloc(tamanho * sizeof(int));
-    if(vetor == NULL){
-        printf("ERRO.");
+    int linha = 3, coluna = 3, escalar;
+    int **matriz;
+    matriz = (int**)malloc(linha * sizeof(int*));
+    if(matriz == NULL){
+        printf("ERRO");
         return 1;
     }
-    for(int i = 0; i < tamanho; i++){
-        printf("Digite um valor na posicao %d:", i+1);
-        scanf("%d", &vetor[i]);
+    for(int i = 0; i < linha; i++){
+        matriz[i] = (int*)malloc(coluna * sizeof(int));
     }
-    printf("Vetor: ");
-    for(int i = 0; i < tamanho; i++){
-        printf("%d ", vetor[i]);
+    for(int i = 0; i < linha; i++) {
+        for(int j = 0; j < coluna; j++){
+            printf("Digite um valor na posicao[%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
     }
-    printf("Selecione um valor para remover: ");
-    scanf("%d", &remover);
+    printf("Digite o escalar: ");
+    scanf("%d", &escalar);
+    for(int i = 0; i < linha; i++) {
+        for(int j = 0; j < coluna; j++){
+            matriz[i][j]*=escalar;
+        }
+    }
+    printf("Matriz multiplicado com a escalar: \n");
+    for(int i = 0; i < linha; i++) {
+        for(int j = 0; j < coluna; j++){
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+    for(int i = 0; i < linha; i++){
+        free(matriz[i]);
+    }
+    free(matriz);
 
-    int i,j;
-    for(i = 0; i < tamanho; i++){
-        if(vetor[i] == remover){
-            break;
-        }
-    }
-    if(i < tamanho){
-        for(j = i; j < tamanho-1; j++){
-            vetor[j] = vetor[j + 1];
-        }
-        tamanho--;
-    } else{
-        printf("Valor nao encontrado no vetor.");
-    }
-    vetor = realloc(vetor, tamanho * sizeof(int));
-    if (vetor == NULL && tamanho > 0) {
-        printf("ERRO: Falha ao redimensionar o vetor.\n");
-        return 1;
-    }
-    printf("Vetor com o valor removido: ");
-    for(int i = 0; i < tamanho; i++){
-        printf("%d ", vetor[i]);
-    }
-    free(vetor);
     return 0;
 }
