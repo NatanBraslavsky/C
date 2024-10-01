@@ -48,17 +48,3 @@ int main(){
 
     return 0;
 }
-
-int inverter_vetor(int *v1, int *v2, int n){
-
-    int maior = 0;
-    for(int i = 0; i < n; i++){
-        if(*(v1 + i) > maior){
-            maior = *(v1 + i);
-        }
-        *(v2 + i) = *(v1 + (n - i - 1));
-    }
-
-    return maior;
-
-}
