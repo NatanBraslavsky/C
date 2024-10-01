@@ -833,5 +833,48 @@
 
 //Número 24
 
+int main(){
 
- 
+    int *vetor, remover = 0, tamanho = 5;
+    vetor = (int*)malloc(tamanho * sizeof(int));
+    if(vetor == NULL){
+        printf("ERRO.");
+        return 1;
+    }
+    for(int i = 0; i < tamanho; i++){
+        printf("Digite um valor na posicao %d:", i+1);
+        scanf("%d", &vetor[i]);
+    }
+    printf("Vetor: ");
+    for(int i = 0; i < tamanho; i++){
+        printf("%d ", vetor[i]);
+    }
+    printf("Selecione um valor para remover: ");
+    scanf("%d", &remover);
+
+    int i,j;
+    for(i = 0; i < tamanho; i++){
+        if(vetor[i] == remover){
+            break;
+        }
+    }
+    if(i < tamanho){
+        for(j = i; j < tamanho-1; j++){
+            vetor[j] = vetor[j + 1];
+        }
+        tamanho--;
+    } else{
+        printf("Valor nao encontrado no vetor.");
+    }
+    vetor = realloc(vetor, tamanho * sizeof(int));
+    if (vetor == NULL && tamanho > 0) {
+        printf("ERRO: Falha ao redimensionar o vetor.\n");
+        return 1;
+    }
+    printf("Vetor com o valor removido: ");
+    for(int i = 0; i < tamanho; i++){
+        printf("%d ", vetor[i]);
+    }
+    free(vetor);
+    return 0;
+}
