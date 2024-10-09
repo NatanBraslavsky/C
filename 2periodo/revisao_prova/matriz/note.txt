@@ -1,0 +1,20 @@
+metrizes
+leitura
+escrita
+soma
+produto = for(int k = 0; k < 3; k++){
+    resultado[i][j] += matrizA[i][k] * matrizB[k][j];
+}
+
+escalar = multiplicar pelo numero que o usuario escolheu
+
+diagonais: principal e secundária
+triângulos: superior e inferior
+
+transposta = matriz[3][2] transposta[2][3]
+for(int i = 0; i < 3; i++){
+    for(int j = 0; j < 2; j++){
+        matriz[i][j] = i+j
+        transposta[j][i] = matriz[i][j]
+    }
+}
