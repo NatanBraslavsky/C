@@ -29,22 +29,44 @@
 
 
 
-void mediaFunction(float vetor[], float *media){
-    float soma = 0;
-    for(int i = 0; i < 5; i++){
-        soma+=vetor[i];
+// void mediaFunction(float vetor[], float *media){
+//     float soma = 0;
+//     for(int i = 0; i < 5; i++){
+//         soma+=vetor[i];
+//     }
+//     *media = soma/5;
+// }
+// int main(){
+
+//     float vetor[5], media;
+//     for(int i = 0; i < 5; i++){
+//         printf("Digite um numero: ");
+//         scanf("%f", &vetor[i]);
+//     }
+//     mediaFunction(vetor, &media);
+//     printf("Media: %.2f", media);
+
+//     return 0;
+// }
+
+
+
+
+void contarCaracter(char *frase, int *qtd){
+    while(*frase != '\0'){
+        (*qtd)++;
+        frase++;
     }
-    *media = soma/5;
 }
+
 int main(){
 
-    float vetor[5], media;
-    for(int i = 0; i < 5; i++){
-        printf("Digite um numero: ");
-        scanf("%f", &vetor[i]);
-    }
-    mediaFunction(vetor, &media);
-    printf("Media: %.2f", media);
+    char frase[50];
+    int qtdCaracter = 0;
+    printf("Digite uma frase: ");
+    fgets(frase, sizeof(frase), stdin);
+    contarCaracter(frase, &qtdCaracter);
+    printf("Quantidade de caracteres: %d", qtdCaracter);
 
     return 0;
 }
