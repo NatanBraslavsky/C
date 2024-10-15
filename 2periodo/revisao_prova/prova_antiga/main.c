@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 // int main(){
 //     int tamanho = 3, matriz[tamanho][tamanho], soma = 0, media = 0, qtdM = 0;
 //     for(int i = 0; i < tamanho; i++){
@@ -147,25 +148,69 @@
 
 
 //!n3
-void contar_vogais(char *str, int *qtdVog);
+// void contar_vogais(char *str, int *qtdVog);
 
+// int main(){
+
+//     char string[50];
+//     int qtdVogal = 0;
+//     printf("Digite algo: ");
+//     fgets(string, sizeof(string), stdin);
+//     contar_vogais(string, &qtdVogal);
+//     printf("Quantidade de vogais: %d", qtdVogal);
+
+//     return 0;
+// }
+
+// void contar_vogais(char *str, int *qtdVog){
+//     while(*str != '\0'){
+//         if(*str == 'a' || *str == 'e' || *str == 'i' || *str == 'o' || *str == 'u'){
+//             (*qtdVog)++;
+//         }
+//         str++;
+//     }
+// }
+
+
+
+//!n4
 int main(){
 
-    char string[50];
-    int qtdVogal = 0;
-    printf("Digite algo: ");
-    fgets(string, sizeof(string), stdin);
-    contar_vogais(string, &qtdVogal);
-    printf("Quantidade de vogais: %d", qtdVogal);
-
-    return 0;
-}
-
-void contar_vogais(char *str, int *qtdVog){
-    while(*str != '\0'){
-        if(*str == 'a' || *str == 'e' || *str == 'i' || *str == 'o' || *str == 'u'){
-            (*qtdVog)++;
-        }
-        str++;
+    int linhas, colunas, qtdParesMaiorQueDez = 0, soma = 0;
+    printf("Quantidade de linhas: ");
+    scanf("%d", &linhas);
+    printf("Quantidade de colunas: ");
+    scanf("%d", &colunas);
+    int **mat;
+    mat = (int**)malloc(linhas * sizeof(int*));
+    if(mat == NULL){
+        printf("ERRO.");
+        return 1;
     }
+    for(int i = 0; i < linhas; i++){
+        mat[i] = (int*)malloc(colunas * sizeof(int));
+        if(mat[i] == NULL){
+            printf("ERRO.");
+            return 1;
+        }
+    }
+    for(int i = 0; i < linhas; i++){
+        for(int j = 0; j < colunas; j++){
+            printf("Digite um valor: ");
+            scanf("%d", &mat[i][j]);
+            soma+=mat[i][j];
+            if(mat[i][j] > 10 && mat[i][j] % 2 == 0){
+                qtdParesMaiorQueDez++;
+            }
+        }
+        printf("\n");
+    }
+    printf("Soma de todos: %d\n", soma);
+    printf("Quantidade de pares acima de 10: %d", qtdParesMaiorQueDez);
+
+    for(int i = 0; i < linhas; i++){
+        free(mat[i]);
+    }
+    free(mat);
+    return 0;
 }
