@@ -26,7 +26,7 @@
 // }
 
 
-//ex002
+// ex002
 // struct tempo{
 //     int minuto;
 //     int hora;
@@ -59,37 +59,67 @@
 
 //ex003
 
-struct endereco{
-    char rua[50];
-    char cidade[50];
-    char estado[50];
+// struct endereco{
+//     char rua[50];
+//     char cidade[50];
+//     char estado[50];
+// };
+
+// typedef struct endereco endereco;
+// struct pessoa{
+//     char nome[50];
+//     endereco endereco2;
+// };
+// typedef struct pessoa pessoa;
+
+// void informacao(pessoa p);
+
+// int main(){
+//     pessoa pessoa1;
+//     printf("Digite seu nome: ");
+//     fgets(pessoa1.nome,50, stdin);
+//     printf("Digite sua rua: ");
+//     fgets(pessoa1.endereco2.rua, 50, stdin);
+//     printf("Digite sua cidade: ");
+//     fgets(pessoa1.endereco2.cidade, 50, stdin);
+//     printf("Digite seu estado: ");
+//     fgets(pessoa1.endereco2.estado, 50, stdin);
+//     informacao(pessoa1);
+
+//     return 0;
+// }
+
+// void informacao(pessoa p) {
+//     printf("\nNome: %sRua: %sCidade: %sEstado: %s", p.nome, p.endereco2.rua, p.endereco2.cidade, p.endereco2.estado);
+// }
+
+
+
+//revisao questao 2
+struct tempo{
+    int minuto;
+    int hora;
 };
 
-typedef struct endereco endereco;
-struct pessoa{
-    char nome[50];
-    endereco endereco2;
-};
-typedef struct pessoa pessoa;
+typedef struct tempo tempo;
 
-void informacao(pessoa p);
+tempo contarTempo(int minuto);
 
 int main(){
-    pessoa pessoa1;
-    printf("Digite seu nome: ");
-    fgets(pessoa1.nome,50, stdin);
-    printf("Digite sua rua: ");
-    fgets(pessoa1.endereco2.rua, 50, stdin);
-    printf("Digite sua cidade: ");
-    fgets(pessoa1.endereco2.cidade, 50, stdin);
-    printf("Digite seu estado: ");
-    fgets(pessoa1.endereco2.estado, 50, stdin);
-    informacao(pessoa1);
+
+    int min;
+    tempo tempoFinal;
+    printf("Digite quantos minutos: ");
+    scanf("%d", &min);
+    tempoFinal = contarTempo(min);
+    printf("%d minutos em horas: %d:%d", min, tempoFinal.hora, tempoFinal.minuto);
 
     return 0;
 }
 
-void informacao(pessoa p) {
-    printf("\nNome: %sRua: %sCidade: %sEstado: %s", p.nome, p.endereco2.rua, p.endereco2.cidade, p.endereco2.estado);
+tempo contarTempo(int minuto){
+    tempo tmp;
+    tmp.hora = minuto / 60;
+    tmp.minuto = minuto % 60;
+    return tmp;
 }
-
